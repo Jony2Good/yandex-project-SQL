@@ -19,4 +19,41 @@ ORDER BY FUNDING_TOTAL DESC;
 SELECT SUM(PRICE_AMOUNT)
 FROM ACQUISITION
 WHERE TERM_CODE = 'cash'
-AND EXTRACT(YEAR FROM ACQUIRED_AT) IN (2011,2012,2013);
+AND EXTRACT(YEAR FROM ACQUIRED_AT) BETWEEN 2011 AND 2013;
+
+4. Отобразите имя, фамилию и названия аккаунтов людей в твиттере, у которых названия аккаунтов начинаются на 'Silver'.
+
+SELECT FIRST_NAME,
+LAST_NAME,
+TWITTER_USERNAME
+FROM PEOPLE
+WHERE TWITTER_USERNAME like 'Silver%';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
